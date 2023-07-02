@@ -1,0 +1,10 @@
+#!/bin/bash
+
+. common_aurora.sh
+
+ssh -p ${EMULATOR_SSH_PORT} -i "${EMULATOR_SSH_ID}" -o "StrictHostKeyChecking=no" ${EMULATOR_SSH_USER}@${EMULATOR_SSH_HOST}
+
+if [ $? -ne 0 ]; then
+    echo "Can not connect to emulator"
+    exit 1
+fi
