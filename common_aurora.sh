@@ -14,4 +14,4 @@ export EMULATOR_SSH_ROOT=root
 export EMULATOR_SSH_ID="$SDK_ROOT/vmshare/ssh/private_keys/sdk"
 export DEVICE_SSH_HOST=192.168.2.15
 export DEVICE_SSH_USER=defaultuser
-export DEVICE_SSH_ID="~/.ssh/id_rsa"
+export DEVICE_SSH_ID="~/.ssh/id_ed25519"
