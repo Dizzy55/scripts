@@ -17,3 +17,19 @@ echo "$@" | ssh \
     -o "StrictHostKeyChecking=no" \
     "$SDK_SSH_ROOT@$SDK_SSH_HOST"
 }
+
+function get_short_architecture {
+    _architecture=$1
+
+    if [ ${_architecture} == "aarch64-meego-linux-gnu" ]; then
+       _arch="aarch64"
+    elif [ ${_architecture} == "armv7hl-meego-linux-gnueabi" ]; then
+       _arch="armv7hl"
+    elif [ ${_architecture} == "x86_64-meego-linux-gnu" ]; then
+       _arch="x86_64"
+    elif [ ${_architecture} == "i486-meego-linux-gnu" ]; then
+       _arch="i486"
+    fi
+
+    echo ${_arch}
+}
