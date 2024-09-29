@@ -1,15 +1,7 @@
 #!/bin/bash
 
 . ../common_aurora.sh
-
-function sdk_cmd {
-echo "$@" | ssh \
-    -q \
-    -p $SDK_SSH_PORT \
-    -i "$SDK_SSH_ID" \
-    -o "StrictHostKeyChecking=no" \
-    "$SDK_SSH_USER@$SDK_SSH_HOST"
-}
+. ../common.sh
 
 sdk_cmd sdk-assistant list | grep -o 'AuroraOS-.*-base-[^.]*$' | while read TARGET; do
     PACKAGE=gettext
