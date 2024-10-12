@@ -7,6 +7,8 @@ export SDK_SSH_USER=mersdk
 export SDK_SSH_ROOT=root
 export SDK_SSH_ID="$SDK_ROOT/vmshare/ssh/private_keys/sdk"
 export SDK_VM_NAME='Aurora Build Engine'
+export SDK_TARGET_PATTERN='AuroraOS-.*-base-[^.]*$'
+# FIXME: delete
 export SDK_PACKAGE_VENDOR=omp
 export SDK_ZYPPER_CACHE_DIR=/home/.zypp-cache/packages/omp/pj:oss:
 export EMULATOR_SSH_HOST=localhost
