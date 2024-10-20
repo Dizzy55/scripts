@@ -11,6 +11,12 @@ unpacked_library_dir=/home/${SDK_SSH_USER}/Downloads/${LIBRARY_NAME}
 # Dir to place unpacked library on host machine
 host_dependencies_path="${script_path}/../../dependencies"
 
+sdk_cmd echo ""
+if [ $? -ne 0 ]; then
+    echo "Can not connect to SDK"
+    exit 1
+fi
+
 echo ""
 echo "**** zypper update ****"
 sdk_root_cmd zypper update
